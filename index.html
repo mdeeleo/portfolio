@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summit Build Co. | Commercial & Residential Construction</title>
+    <meta
+      name="description"
+      content="Summit Build Co. is a full-service construction company delivering commercial and residential projects with safety, quality, and reliability."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="home">
+      <nav class="nav container">
+        <a class="brand" href="#home">Summit Build Co.</a>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content container">
+        <p class="eyebrow">Trusted Construction Partner</p>
+        <h1>Building durable spaces that power communities.</h1>
+        <p class="hero-copy">
+          From commercial developments to custom homes, Summit Build Co. manages every phase—from
+          planning and permits to final handover—with precision and transparency.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Request a Quote</a>
+          <a class="btn btn-secondary" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="services">
+        <div class="container">
+          <h2>What We Build</h2>
+          <p class="section-intro">
+            End-to-end construction services tailored to timelines, budgets, and site requirements.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>Commercial Construction</h3>
+              <p>Retail, office, and mixed-use projects delivered with strict schedule control.</p>
+            </article>
+            <article class="card">
+              <h3>Residential Construction</h3>
+              <p>Custom homes and multi-family developments built for long-term comfort and value.</p>
+            </article>
+            <article class="card">
+              <h3>Renovations & Fit-Outs</h3>
+              <p>Complete upgrades that modernize existing spaces without disrupting operations.</p>
+            </article>
+            <article class="card">
+              <h3>Project Management</h3>
+              <p>Single-point accountability for scope, safety, subcontractor coordination, and quality.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div class="project-grid">
+            <article class="project">
+              <h3>Riverside Office Complex</h3>
+              <p>82,000 sq ft commercial campus delivered 3 weeks ahead of schedule.</p>
+            </article>
+            <article class="project">
+              <h3>Oakwood Residences</h3>
+              <p>24-unit residential build with energy-efficient systems and premium finishes.</p>
+            </article>
+            <article class="project">
+              <h3>Northgate Retail Center</h3>
+              <p>Ground-up retail construction with integrated parking and utilities upgrades.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-layout">
+          <div>
+            <h2>Why Summit Build Co.</h2>
+            <p>
+              With 15+ years of experience, our team combines engineering discipline with practical
+              field execution. We prioritize site safety, clear communication, and craftsmanship that
+              stands the test of time.
+            </p>
+          </div>
+          <ul class="stats">
+            <li><strong>250+</strong><span>Projects Completed</span></li>
+            <li><strong>15+</strong><span>Years Experience</span></li>
+            <li><strong>98%</strong><span>On-Time Delivery</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-contact" id="contact">
+        <div class="container">
+          <h2>Start Your Project</h2>
+          <p class="section-intro">Tell us about your goals and we’ll get back within one business day.</p>
+          <form class="contact-form" aria-label="Contact form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@company.com" required />
+            </label>
+            <label>
+              Project Type
+              <select name="projectType" required>
+                <option value="">Select one</option>
+                <option>Commercial</option>
+                <option>Residential</option>
+                <option>Renovation</option>
+              </select>
+            </label>
+            <label class="full-width">
+              Project Details
+              <textarea name="details" rows="5" placeholder="Budget, timeline, location, and scope" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          </form>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Summit Build Co. All rights reserved.</p>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

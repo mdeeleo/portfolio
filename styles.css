@@ -1,0 +1,273 @@
+:root {
+  --bg: #111827;
+  --bg-alt: #f3f4f6;
+  --text: #111827;
+  --light: #f9fafb;
+  --primary: #ea580c;
+  --primary-dark: #c2410c;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: #fff;
+}
+
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+.hero {
+  color: var(--light);
+  background:
+    linear-gradient(rgba(17, 24, 39, 0.78), rgba(17, 24, 39, 0.78)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=80') center/cover;
+  min-height: 80vh;
+  padding-bottom: 4rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.7rem;
+}
+
+.hero-content {
+  padding-top: 5rem;
+  max-width: 680px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: #fb923c;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin-bottom: 1rem;
+}
+
+.hero-copy {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  border: 0;
+  text-decoration: none;
+  border-radius: 0.65rem;
+  padding: 0.72rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+.section-contact {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+.section-contact .section-intro {
+  color: #d1d5db;
+}
+
+.cards,
+.project-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.project {
+  background: var(--card);
+  border-radius: 0.8rem;
+  padding: 1.1rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.stats li {
+  padding: 0.95rem;
+  border-radius: 0.7rem;
+  background: #f3f4f6;
+}
+
+.stats strong {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.contact-form {
+  margin-top: 1.3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #f9fafb;
+  border-radius: 0.55rem;
+  padding: 0.65rem;
+  font: inherit;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-message {
+  min-height: 1.2rem;
+  color: #fdba74;
+}
+
+.footer {
+  background: #0b1220;
+  color: #d1d5db;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footer a {
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 3.7rem;
+    right: 1rem;
+    flex-direction: column;
+    background: rgba(17, 24, 39, 0.96);
+    border-radius: 0.6rem;
+    padding: 0.8rem;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .about-layout,
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
